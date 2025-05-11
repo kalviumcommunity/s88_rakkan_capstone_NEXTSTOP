@@ -21,3 +21,18 @@ router.post('/', (req, res) => {
 });
 
 module.exports = router;
+
+// PUT endpoint - update user data
+router.put('/', (req, res) => {
+  const { name, email } = req.body;
+
+  if (!name || !email) {
+    return res.status(400).json({ error: 'Name and email are required' });
+  }
+
+  res.status(200).json({
+    message: 'User data updated successfully',
+    updatedData: { name, email }
+  });
+});
+
