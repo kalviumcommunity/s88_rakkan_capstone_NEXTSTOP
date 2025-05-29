@@ -1,15 +1,15 @@
 const express = require('express');
 const router = express.Router();
 
-// GET endpoint
+// ✅ GET endpoint
 router.get('/', (req, res) => {
   res.json({ message: 'GET /api/test - backend working ✅' });
 });
 
-// POST endpoint
+// ✅ POST endpoint
 router.post('/', (req, res) => {
   const { name, email } = req.body;
-  
+
   if (!name || !email) {
     return res.status(400).json({ error: 'Name and email are required' });
   }
@@ -20,9 +20,7 @@ router.post('/', (req, res) => {
   });
 });
 
-module.exports = router;
-
-// PUT endpoint - update user data
+// ✅ PUT endpoint (MUST BE INSIDE router)
 router.put('/', (req, res) => {
   const { name, email } = req.body;
 
@@ -36,3 +34,4 @@ router.put('/', (req, res) => {
   });
 });
 
+module.exports = router;
