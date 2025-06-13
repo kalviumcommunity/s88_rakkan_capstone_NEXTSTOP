@@ -47,3 +47,6 @@ Day 18: Test all functionality end-to-end on the deployed version.
 Day 19: Prepare project documentation, screenshots, and demo video.
 
 Day 20: Final review and project submission.
+
+
+Frontend deployed link:-  gleeful-sable-fa46aa.netlify.app
